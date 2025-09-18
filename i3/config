@@ -208,7 +208,13 @@ bar {
         # focused_workspace  #4c7899 #285577 #ffffff
 
         # Vinho
-        focused_workspace #770000 #440000 #ffffff
+        # focused_workspace #770000 #440000 #ffffff
+
+        # Verde
+        focused_workspace #4E732A #263815 #ffffff
+
+        # Marrom
+        focused_workspace #8C6545 #4F3927 #ffffff
 
         # active_workspace   #550000 #330000 #ffffff
         # inactive_workspace #222222 #111111 #888888
@@ -222,7 +228,13 @@ bar {
 # client.focused           #4c7899  #285577   #ffffff  #2e9ef4   #285577
 
 # Vinho
-client.focused           #770000  #440000   #ffffff  #aa0000   #440000
+# client.focused           #770000  #440000   #ffffff  #aa0000   #440000
+
+# Verde
+# client.focused           #4E732A  #263815   #ffffff  #4E732A   #263815
+
+# Marrom
+client.focused           #8C6545  #543D29   #ffffff  #8C6545   #6D5036
 
 # client.unfocused         #333333  #222222   #888888  #292d2e   #222222
 # client.focused_inactive  #5f676a  #222222   #ffffff  #484e50   #222222

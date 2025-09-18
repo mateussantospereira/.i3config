@@ -9,6 +9,7 @@
 general {
         colors = true
         interval = 5
+        color_good = "#5fd700"
 }
 
 #order += "ipv6"
@@ -29,6 +30,8 @@ wireless _first_ {
 ethernet _first_ {
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
+       # color_up = "#00ffff"
+        #color_down = "#ff0000"
 }
 
 battery all {
