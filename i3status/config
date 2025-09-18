@@ -13,8 +13,8 @@ general {
 
 #order += "ipv6"
 #order += "wireless _first_"
-#order += "ethernet _first_"
-order += "battery all"
+order += "ethernet _first_"
+#order += "battery all"
 order += "disk /"
 order += "load"
 order += "memory"
@@ -44,7 +44,7 @@ load {
 }
 
 memory {
-        format = "%used | %available"
+        format = "%used / %available"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
@@ -58,5 +58,6 @@ volume master {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        #format = "%Y-%m-%d %H:%M:%S"
+        format = "%H:%M:%S %d/%m/%Y "
 }
