@@ -36,6 +36,11 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec --no-startup-id compton
 
+# Wallpaper
+# exec --no-startup-id feh /home/mateus/Imagens/50995529518_cc845fae01_o.jpg --bg-fill
+exec --no-startup-id nitrogen --restore
+# exec --no-startup-id xsetroot -solid "#ffffff"
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
@@ -45,6 +50,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+floating_maximum_size 1150 x 640
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
@@ -185,6 +192,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+
 bindsym $mod+b exec luakit
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -214,7 +222,7 @@ bar {
         focused_workspace #4E732A #263815 #ffffff
 
         # Marrom
-        focused_workspace #8C6545 #4F3927 #ffffff
+        # focused_workspace #8C6545 #4F3927 #ffffff
 
         # active_workspace   #550000 #330000 #ffffff
         # inactive_workspace #222222 #111111 #888888
@@ -231,10 +239,10 @@ bar {
 # client.focused           #770000  #440000   #ffffff  #aa0000   #440000
 
 # Verde
-# client.focused           #4E732A  #263815   #ffffff  #4E732A   #263815
+client.focused           #4E732A  #263815   #ffffff  #4E732A   #263815
 
 # Marrom
-client.focused           #8C6545  #543D29   #ffffff  #8C6545   #6D5036
+# client.focused           #8C6545  #543D29   #ffffff  #8C6545   #6D5036
 
 # client.unfocused         #333333  #222222   #888888  #292d2e   #222222
 # client.focused_inactive  #5f676a  #222222   #ffffff  #484e50   #222222
