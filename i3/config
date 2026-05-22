@@ -36,12 +36,20 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec --no-startup-id compton
 
-exec --no-startup-id gammastep
+# exec --no-startup-id xss-lock -- i3lock -n
 
 # Wallpaper
 # exec --no-startup-id feh /home/mateus/Imagens/50995529518_cc845fae01_o.jpg --bg-fill
 exec --no-startup-id nitrogen --restore
 # exec --no-startup-id xsetroot -solid "#ffffff"
+
+# Passar o conteúdo do PRIMARY para CLIPBOARD
+exec --no-startup-id autocutsel -selection PRIMARY -fork
+exec --no-startup-id autocutsel -selection CLIPBOARD -fork
+
+# Brilho
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -197,6 +205,9 @@ bindsym $mod+r mode "resize"
 bindsym $mod+b exec luakit
 
 bindsym $mod+x exec web
+
+bindsym $mod+F5 exec --no-startup-id ~/.config/i3/scripts/toggle-redshift.sh
+
 # /home/mateus/Projetos/home-browser/links.html
 
 # Start i3bar to display a workspace bar (plus the system information i3status
